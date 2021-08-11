@@ -1,5 +1,6 @@
 const express = require('express') 
 const mongoose = require('mongoose')
+const port = process.env.PORT || 5000
 
 const app = express()
 
@@ -21,6 +22,6 @@ mongoose.connect(db, {
         )
      
 app.use('/', require('./routes/url'))
-app.listen(5000, () => 
-                 console.log("server is running port on 5000")
+app.listen(port, () => 
+                 console.log(`server is running port on ${port}`)
         )
