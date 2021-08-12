@@ -43,7 +43,7 @@ router.post('/add', urlencodedParser, (req, res) => {
     newUrl
         .save()
         .then(()=> res.render('home' , {'msg' : 'Added'}))
-        .catch(()=> res.render('home' , {'msg' : 'Not added'}))
+        .catch(()=> res.render('home' , {'msg' : 'This Usrl or Address name already added'}))
 })
 
 module.exports = router ;
